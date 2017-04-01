@@ -3453,7 +3453,9 @@ var screenshot = function screenshot() {
                return _utils.domprocess.clipImageToCanvas(image, self.rect.startX, self.rect.startY, self.rect.w, self.rect.h);
             }).then(function (canvas) {
                return _utils.domprocess.downloadCanvas(canvas, self.filename);
-            }).then(_utils.domprocess.remove);
+            }).then(_utils.domprocess.remove).catch(function (error) {
+               return console.error(error);
+            });
          });
 
          //  domcapture.getCanvas(element)
@@ -3695,7 +3697,6 @@ var downloadCanvas = function downloadCanvas(canvas, filename) {
    downloadLink.click();
    downloadLink.remove();
    DOMURL.revokeObjectURL(downloadUrl);
-
    return Promise.resolve(canvas);
 };
 
