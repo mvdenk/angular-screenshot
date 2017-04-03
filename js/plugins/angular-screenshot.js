@@ -3707,7 +3707,7 @@ var getStyle = function getStyle(element, property) {
 
 var isTransparent = function isTransparent(element) {
    var backgroundColor = window.getComputedStyle(element).backgroundColor;
-   return backgroundColor === 'transparent' || backgroundColor === '' || backgroundColor === 'rgba(0,0,0,0)';
+   return backgroundColor === 'transparent' || backgroundColor === '' || backgroundColor === 'rgba(0, 0, 0, 0)';
 };
 
 var listenInteractiveCanvas = function listenInteractiveCanvas(canvas, rectBackground, mouseupListener, mousedownListener, contextmenuListener) {
