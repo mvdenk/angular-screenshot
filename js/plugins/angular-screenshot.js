@@ -3645,7 +3645,7 @@ exports.default = screenshot;
 Object.defineProperty(exports, "__esModule", {
    value: true
 });
-var DOMURL = window.URL || window.webkitURL || window;
+var DOMURL = window.URL;
 var appendToBody = function appendToBody(element) {
    document.body.appendChild(element);
    return Promise.resolve(element);
