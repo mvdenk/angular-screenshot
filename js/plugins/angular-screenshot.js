@@ -3376,7 +3376,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var screenshotToolbox = function screenshotToolbox() {
    var linkFn = function linkFn(scope, element, attrs, screenshotCtrl) {
-      var template = '<div>' + element.children().html() + '</div>';
+      var template = '<div class="screenshot-toolbox">' + element.children().html() + '</div>';
       screenshotCtrl.setTemplate(template, scope);
       element.remove();
    };
