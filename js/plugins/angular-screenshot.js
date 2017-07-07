@@ -3688,7 +3688,7 @@ var screenshot = function screenshot() {
  *    cancelText: 'Cancel',
  *    downloadText: 'Download'
  * }] toolboxOptions
- * @param {object=} [api={download, cancel, downloadFull}] Expose api to interactive custom template action.
+ * @param {object=} [api={download, cancel, downloadFull, toPng}] Expose api to interactive custom template action.
  */
 exports.default = screenshot;
 
