@@ -115,7 +115,7 @@ const screenshot = () => {
                .then(domprocess.dataUrlToImage)
                .then(image => {
                   domprocess.remove(image);
-                  return domprocess.clipImageToCanvas(image, self.rect.startX, self.rect.startY, self.rect.w, self.rect.h);
+                  return domprocess.clipImageToCanvas(image, self.rect.startX || 0, self.rect.startY || 0, self.rect.w || options.width, self.rect.h || options.height);
                })
                .then(canvas => {
                   const url = canvas.toDataURL('image/png');
